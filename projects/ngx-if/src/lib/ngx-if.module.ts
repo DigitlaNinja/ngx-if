@@ -1,16 +1,9 @@
 import { NgModule } from '@angular/core';
-import { NgxIfComponent } from './ngx-if.component';
-
-
+import { CommonModule } from '@angular/common';
+import { NgxIfDirective } from './ngx-if.directive';
 
 @NgModule({
-  declarations: [
-    NgxIfComponent
-  ],
-  imports: [
-  ],
-  exports: [
-    NgxIfComponent
-  ]
+  declarations: [NgxIfDirective],
+  imports: [CommonModule],
 })
-export class NgxIfModule { }
+export class NgxIfModule {}
