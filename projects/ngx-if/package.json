@@ -1,6 +1,7 @@
 {
-  "name": "ngx-if",
-  "version": "0.0.1",
+  "name": "@ngninja/ngx-if",
+  "version": "0.1.0",
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^15.2.0",
     "@angular/core": "^15.2.0"
@@ -8,5 +9,12 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digitlaninja/ngx-if.git"
+  },
+  "bugs": {
+    "url": "https://github.com/digitlaninja/ngx-if/issues"
+  },
+  "homepage": "https://github.com/digitlaninja/ngx-if#readme"
 }

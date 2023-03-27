@@ -1,7 +1,6 @@
 {
-  "name": "@ninja/ngx-if",
-  "version": "0.0.0",
-  "license": "MIT",
+  "name": "@ngninja/ngx-if",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "ng": "ng",
