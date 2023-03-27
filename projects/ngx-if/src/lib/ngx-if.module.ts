@@ -5,5 +5,6 @@ import { NgxIfDirective } from './ngx-if.directive';
 @NgModule({
   declarations: [NgxIfDirective],
   imports: [CommonModule],
+  exports: [NgxIfDirective],
 })
 export class NgxIfModule {}
