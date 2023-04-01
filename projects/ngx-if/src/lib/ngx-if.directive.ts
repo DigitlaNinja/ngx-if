@@ -24,8 +24,7 @@ type OptionalTplRef<T> = TemplateRef<T> | null | undefined;
   selector: '[ngxIf]',
 })
 export class NgxIfDirective<T = unknown> implements OnChanges, OnDestroy {
-  @Input('ngxIf')
-  public data$!: Observable<T>;
+  @Input('ngxIfOf') public data$!: Observable<T>;
 
   @Input('ngxIfLoading')
   public loadingTpl: OptionalTplRef<void>;
@@ -42,14 +41,6 @@ export class NgxIfDirective<T = unknown> implements OnChanges, OnDestroy {
   ) {}
 
   public ngOnChanges(): void {
-    if (this.data$) {
-      this.initData$();
-    } else {
-      this.renderTpl(this.defaultTpl);
-    }
-  }
-
-  private initData$(): void {
     let data: T;
 
     this.renderTpl(this.loadingTpl);
@@ -65,6 +56,8 @@ export class NgxIfDirective<T = unknown> implements OnChanges, OnDestroy {
         error: () => this.renderTpl(this.errorTpl),
       });
   }
+
+
 
   public ngOnDestroy(): void {
     this.viewDestroyed$.next(true);
